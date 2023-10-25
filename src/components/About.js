@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, Linking } from 'react-native';
-import { styles } from '../styles/styles';
+import { View, Text, Linking, StyleSheet } from 'react-native';
 
 const About = () => {
    return (
@@ -30,3 +29,23 @@ const About = () => {
 };
 
 export default About;
+
+const styles = StyleSheet.create({
+   aboutContainer: {
+      flex: 1,
+      padding: 20,
+      backgroundColor: '#fff',
+   },
+
+   aboutText: {
+      fontSize: 16,
+      marginBottom: 10,
+   },
+
+   link: {
+      fontSize: 16,
+      color: 'blue',
+      textDecorationLine: 'underline',
+      marginBottom: 10,
+   },
+});

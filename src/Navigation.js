@@ -2,8 +2,8 @@ import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import List from './components/List';
-import Details from './components/Details';
+import ListScreen from './screens/ListScreen';
+import DetailsScreen from './screens/DetailsScreen';
 import About from './components/About';
 
 const Tab = createBottomTabNavigator();
@@ -16,15 +16,15 @@ const PokemonStack = () => (
       })}
    >
       <Stack.Screen 
-         name='Pokemons List' 
-         component={List}
-         options={({}) => ({
+         name='Pokemon List' 
+         component={ListScreen}
+         options={() => ({
             headerTitle: 'Pokemons',
          })}  
       />
       <Stack.Screen 
          name='Details' 
-         component={Details}   
+         component={DetailsScreen}   
       />
    </Stack.Navigator>
 );
@@ -41,14 +41,14 @@ const AppNavigation = () =>(
          <Tab.Screen 
             name='Pokemons' 
             component={PokemonStack}
-            options={({}) => ({
+            options={() => ({
                headerShown: false,
             })}
          />
          <Tab.Screen 
             name='About' 
             component={About}
-            options={({}) => ({
+            options={() => ({
                headerTitle: 'About This App',
                headerTitleAlign: 'center',
             })}

@@ -1,9 +1,8 @@
 import React from "react";
-import { View, Text, Image, Pressable} from 'react-native';
-import { styles } from "../styles/styles";
+import { View, Text, Image, Pressable, StyleSheet} from 'react-native';
 import { capitalizeFirstLetter } from "../utils";
 
-const Card = ({ pokemon, onPress }) => {
+const Card = React.memo(({ pokemon, onPress }) => {
    return (
       <Pressable onPress={onPress}>
          <View style={styles.card}>
@@ -15,6 +14,26 @@ const Card = ({ pokemon, onPress }) => {
          </View>
       </Pressable>
    );
-};
+});
 
 export default Card;
+
+const styles = StyleSheet.create({
+   card: {
+      backgroundColor: '#b7d7e8',
+      borderRadius: 10,
+      padding: 20,
+      margin: 8,
+      alignItems: 'center',
+   },
+
+   cardImage: {
+      width: 100,
+      height: 100,
+   },
+
+   cardTitle: {
+      fontSize: 18,
+      marginTop: 8,
+   },
+});
