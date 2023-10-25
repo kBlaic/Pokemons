@@ -1,6 +1,6 @@
 # Pokemons
 
-This app is a simple Pokemon viewer that fetches data from the PokeAPI.
+This React Native app is a simple Pokemon viewer that fetches data from the PokeAPI.
 
 From the root directory run the following command:
 
