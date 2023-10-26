@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Linking, StyleSheet } from 'react-native';
 
-const About = () => {
+const AboutScreen = () => {
    return (
       <View style={styles.aboutContainer}>
          <Text style={styles.aboutText}>
@@ -28,7 +28,7 @@ const About = () => {
    );
 };
 
-export default About;
+export default AboutScreen;
 
 const styles = StyleSheet.create({
    aboutContainer: {

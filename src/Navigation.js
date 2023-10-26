@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import ListScreen from './screens/ListScreen';
 import DetailsScreen from './screens/DetailsScreen';
-import About from './components/About';
+import AboutScreen from './screens/AboutScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -47,7 +47,7 @@ const AppNavigation = () =>(
          />
          <Tab.Screen 
             name='About' 
-            component={About}
+            component={AboutScreen}
             options={() => ({
                headerTitle: 'About This App',
                headerTitleAlign: 'center',
