@@ -8,11 +8,11 @@ const ListScreen = ({ navigation }) => {
    const [offset, setOffset] = useState(0);
    const [loading, setLoading] = useState(true);
    const [pokemonList, setPokemonList] = useState([]);
-
+ 
    const fetchPokemons = async (newOffset) => {
       try {
          setLoading(true);
-         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=60&offset=${newOffset}`);
+         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=30&offset=${newOffset}`);
          const newPokemons = response.data.results;
          setPokemonList((prevPokemons) => [...prevPokemons, ...newPokemons]);
       } catch (error) {
@@ -27,7 +27,7 @@ const ListScreen = ({ navigation }) => {
    }, [offset]);
 
    const handleEndReached = () => {
-      const newOffset = offset + 60;
+      const newOffset = offset + 30;
       setOffset(newOffset);
    };
 
