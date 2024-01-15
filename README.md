@@ -1,14 +1,44 @@
 # Pokemons
 
-This React Native app is a simple Pokemon viewer that fetches data from the PokeAPI.
+A mobile application built with React Native that serves as a PokeDex, fetching and displaying data from the PokeAPI.
 
-From the root directory run the following command:
 
+## Features
+
+- Browse a list of Pokemon
+- View detailed information about each Pokemon
+
+
+### Built With
+
+- React Native - Framework for building mobile applications
+- Expo - Toolchain for React Native projects
+- Axios - Promise-based HTTP client for making requests to the PokeAPI
+
+
+### Prerequisites
+
+- Node.js and npm installed
+
+  
+## Installing
+
+1. Navigate to the project folder
+  
+2. Install dependencies:
+   
 ```sh
 npm install
 ```
-And then you can start a development server:
+
+3. Start the development server:
 
 ```sh
 npm start
+```
+
+or
+
+```sh
+npx expo start
 ```
